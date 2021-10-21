@@ -1,5 +1,7 @@
 import { Routes } from '@angular/router';
-
+import { CreateUserComponent } from '../../components/create-user/create-user.component';
+import { ListUserComponent } from '../../components/list-user/list-user.component';
+import { EditUserComponent } from '../../components/edit-user/edit-user.component';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { TableListComponent } from '../../table-list/table-list.component';
@@ -60,4 +62,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'maps',           component: MapsComponent },
     { path: 'notifications',  component: NotificationsComponent },
     { path: 'upgrade',        component: UpgradeComponent },
+    { path: 'create', component: CreateUserComponent },
+    { path: 'list-users', component: ListUserComponent },
+    { path: 'update-user/:id', component: EditUserComponent },
 ];

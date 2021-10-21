@@ -1,0 +1,33 @@
+<div class="main-content">
+  <div class="container-fluid">
+<p>list-user works!</p>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nama</th>
+        <th scope="col">TTL</th>
+        <th scope="col">NIS</th>
+        <th scope="col">Agama </th>
+        <th scope="col">Alamat </th>
+        <th scope="col">Nomor </th>
+        <th scope="col">Gender </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of Users; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ user.Nama }}</td>
+        <td>{{ user.TTL }}</td>
+        <td>{{ user.NIS }}</td>
+        <td>{{ user.Agama }}</td>
+        <td>{{ user.Alamat }}</td>
+        <td>{{ user.Nomor }}</td>
+        <td>{{ user.Gender }}</td>
+        <td>
+          <span (click)="removeUser(user)" class="text-danger">Delete</span> &nbsp;
+          <span routerLink="/update-user/{{user.id}}" class="text-primary">Edit</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>

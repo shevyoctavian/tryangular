@@ -1,0 +1,44 @@
+<div class="main-content">
+  <div class="container-fluid">
+<p>create-user works!</p>
+<form [formGroup]="UserForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="mb-3">
+      <label>Nama</label>
+      <input type="text" formControlName="Nama" class="form-control" required>
+    </div>
+  
+    <div class="mb-3">
+      <label>TTL</label>
+      <input type="text" formControlName="TTL" class="form-control" required>
+    </div>
+  
+    <div class="mb-3">
+      <label>NIS</label>
+      <input type="text" formControlName="NIS" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label>Agama</label>
+        <input type="text" formControlName="Agama" class="form-control" required>
+      </div>
+    
+      <div class="mb-3">
+        <label>Alamat</label>
+        <input type="text" formControlName="Alamat" class="form-control" required>
+      </div>
+    
+      <div class="mb-3">
+        <label>Nomor</label>
+        <input type="text" formControlName="Nomor" class="form-control" required>
+      </div>
+
+      <div class="mb-3">
+        <label>Gender</label>
+        <input type="text" formControlName="Gender" class="form-control" required>
+      </div> 
+    
+  
+    <div class="mb-3">
+      <button type="submit" class="btn btn-primary" [disabled]="!UserForm.valid">Create</button>
+    </div>
+  </form>
