@@ -4,7 +4,7 @@ import { User } from '../../services/user/user.model';
 @Component({
   selector: 'app-list-user',
   templateUrl: './list-user.component.html',
-  styleUrls: ['./list-user.component.scss']
+  styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent implements OnInit {
 Users: User[];
